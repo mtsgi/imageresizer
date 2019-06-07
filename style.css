@@ -1,0 +1,70 @@
+body{
+    color: #ffffff;
+    font-weight: 100;
+    margin: 0;
+    min-height: 100vh;
+    text-align: center;
+    background: linear-gradient(-135deg, #E4A972, #9941D8);
+}
+
+header{
+    background: rgba(255,255,255,.2);
+    padding: 10px;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.2);
+}
+
+.resize{
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background: linear-gradient(-135deg, #E4A972, #9941D8);
+    padding: 10px 30px;
+}
+
+#form{
+    padding: 20px;
+}
+
+#form label{
+    display: inline-block;
+    width: 100px;
+}
+
+#logs{
+    background: rgba(0,0,0,.2);
+    position: absolute;
+    bottom: 0px;
+    height: 200px;
+    width: 100%;
+    overflow: scroll;
+    text-align: left;
+}
+
+#logs div{
+    border-bottom: 1px solid silver;
+    padding: 2px;
+}
+
+img{
+    margin: 10px;
+    box-shadow: 1px 1px 3px 0 rgba(0,0,0,.2);
+}
+
+.textbox{
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 100;
+    width: 200px;
+    background: transparent;
+    border: none;
+    margin-left: 20px;
+    border-bottom: 1px solid transparent;
+    padding: 5px;
+}
+
+.textbox:focus{
+    background: rgba(255,255,255,.2);
+    border-bottom: 1px solid #ffffff;
+}

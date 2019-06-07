@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ImageResizer</title>
+    <link rel="stylesheet" href="https://mtsgi.github.io/kitstrap/d/kitstrap-font.css">
+    <script src="./imgresize.js"></script>
+    <script src="./jquery.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+            <input id="imageFile" type="file">
+            <a class="resize" onclick="resize()">Resize</a>
+    </header>
+    <div id="form">
+        <label for="max-width">Max Width</label><input type="text" class="textbox" id="max-width" value="150"><br>
+        <label for="max-height">Max Height</label> <input type="text" class="textbox" id="max-height" value="150">
+    </div>
+    <img src="" id="output">
+    <kit-space></kit-space>
+    <div id="logs" class="silver">
+    </div>
+</body>
+</html>

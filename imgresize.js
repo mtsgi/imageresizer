@@ -1,5 +1,6 @@
-function resize() {
-    let file = document.getElementById( 'imageFile' ).files[0];
+function resize(files) {
+    let file = files || document.getElementById( 'imageFile' ).files[0];
+    if( files ) file = files[0];
 
     let img = document.createElement( "img" );
     let reader = new FileReader();
@@ -17,7 +18,7 @@ function resize() {
         var w = img.width, h = img.height;
         if( w == 0 && h == 0 ){
             mylog("[!]画像の読み込みに失敗/再試行します");
-            resize();
+            resize( files || null );
             return;
         }
 
@@ -58,3 +59,20 @@ function resize() {
 function mylog( str ) {
     $( "#logs" ).append( "<div>" + str + "</div>" );
 }
+
+window.addEventListener('dragover', function(event) {
+    event.preventDefault();
+    event.dataTransfer.dropEffect = 'copy';
+    $("body").addClass("drop");
+});
+
+window.addEventListener('dragleave', function() {
+    $("body").removeClass("drop");
+});
+
+window.addEventListener('drop', function(event) {
+    event.preventDefault();
+    var files = event.dataTransfer.files;
+    $("body").removeClass("drop");
+    resize(files);
+});

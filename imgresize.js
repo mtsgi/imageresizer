@@ -47,7 +47,12 @@ function resize() {
 
         document.getElementById( 'output' ).src = canvas.toDataURL( "image/png" );
     }
-    reader.readAsDataURL( file );
+    try {
+        reader.readAsDataURL( file );
+    } catch (error) {
+        mylog( "エラーです:" + error );
+    }
+
 }
 
 function mylog( str ) {

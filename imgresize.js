@@ -16,7 +16,7 @@ function resize(files) {
         let maxWidth = Number( $( "#max-width" ).val() ) || Infinity;
         let maxHeight = Number( $( "#max-height" ).val() ) || Infinity;
         var w = img.width, h = img.height;
-        if( w == 0 && h == 0 ){
+        if( w && w == 0 && h && h == 0 ){
             mylog("[!]画像の読み込みに失敗/再試行します");
             resize( files || null );
             return;
